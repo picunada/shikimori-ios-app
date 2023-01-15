@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E648D3392954E7B100ACEDDE /* AnimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648D3382954E7B100ACEDDE /* AnimeViewModel.swift */; };
+		E648D33B2954E91400ACEDDE /* AnimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648D33A2954E91400ACEDDE /* AnimeModel.swift */; };
+		E65B25E12971D17E00BC37AC /* AnimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65B25E02971D17E00BC37AC /* AnimeManager.swift */; };
+		E674DD13294E3E76003F9CD6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674DD12294E3E76003F9CD6 /* HomeView.swift */; };
+		E674DD15294E3EEF003F9CD6 /* DatabaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674DD14294E3EEF003F9CD6 /* DatabaseView.swift */; };
+		E674DD17294E3EFD003F9CD6 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674DD16294E3EFD003F9CD6 /* CommunityView.swift */; };
+		E674DD19294E3F62003F9CD6 /* MiscellaneousView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674DD18294E3F62003F9CD6 /* MiscellaneousView.swift */; };
+		E674DD1B294E3F7B003F9CD6 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674DD1A294E3F7B003F9CD6 /* InformationView.swift */; };
+		E69A5403294FFABE005519FA /* AppDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69A5402294FFABD005519FA /* AppDataViewModel.swift */; };
+		E69A540529508EE7005519FA /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69A540429508EE6005519FA /* AuthViewModel.swift */; };
+		E69A540729517001005519FA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69A540629517001005519FA /* LoginView.swift */; };
 		E6AD01B1294E3A6F0065E5A6 /* ShikimoriAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD01B0294E3A6F0065E5A6 /* ShikimoriAppApp.swift */; };
 		E6AD01B3294E3A6F0065E5A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AD01B2294E3A6F0065E5A6 /* ContentView.swift */; };
 		E6AD01B5294E3A700065E5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6AD01B4294E3A700065E5A6 /* Assets.xcassets */; };
@@ -36,6 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E648D3382954E7B100ACEDDE /* AnimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewModel.swift; sourceTree = "<group>"; };
+		E648D33A2954E91400ACEDDE /* AnimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeModel.swift; sourceTree = "<group>"; };
+		E65B25E02971D17E00BC37AC /* AnimeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeManager.swift; sourceTree = "<group>"; };
+		E674DD12294E3E76003F9CD6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E674DD14294E3EEF003F9CD6 /* DatabaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseView.swift; sourceTree = "<group>"; };
+		E674DD16294E3EFD003F9CD6 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
+		E674DD18294E3F62003F9CD6 /* MiscellaneousView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscellaneousView.swift; sourceTree = "<group>"; };
+		E674DD1A294E3F7B003F9CD6 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		E69A53FE294FF6AA005519FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E69A5402294FFABD005519FA /* AppDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataViewModel.swift; sourceTree = "<group>"; };
+		E69A540429508EE6005519FA /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		E69A540629517001005519FA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E6AD01AD294E3A6F0065E5A6 /* ShikimoriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShikimoriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6AD01B0294E3A6F0065E5A6 /* ShikimoriAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikimoriAppApp.swift; sourceTree = "<group>"; };
 		E6AD01B2294E3A6F0065E5A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +98,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E65B25DF2971D06A00BC37AC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E65B25E02971D17E00BC37AC /* AnimeManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E674DD11294E3E44003F9CD6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E674DD12294E3E76003F9CD6 /* HomeView.swift */,
+				E674DD14294E3EEF003F9CD6 /* DatabaseView.swift */,
+				E674DD16294E3EFD003F9CD6 /* CommunityView.swift */,
+				E674DD18294E3F62003F9CD6 /* MiscellaneousView.swift */,
+				E674DD1A294E3F7B003F9CD6 /* InformationView.swift */,
+				E69A540629517001005519FA /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E69A5400294FFA1A005519FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E648D33A2954E91400ACEDDE /* AnimeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E69A5401294FFA27005519FA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E69A5402294FFABD005519FA /* AppDataViewModel.swift */,
+				E69A540429508EE6005519FA /* AuthViewModel.swift */,
+				E648D3382954E7B100ACEDDE /* AnimeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E6AD01A4294E3A6F0065E5A6 = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +160,11 @@
 		E6AD01AF294E3A6F0065E5A6 /* ShikimoriApp */ = {
 			isa = PBXGroup;
 			children = (
+				E65B25DF2971D06A00BC37AC /* Managers */,
+				E69A5401294FFA27005519FA /* ViewModels */,
+				E69A5400294FFA1A005519FA /* Models */,
+				E69A53FE294FF6AA005519FA /* Info.plist */,
+				E674DD11294E3E44003F9CD6 /* Views */,
 				E6AD01B0294E3A6F0065E5A6 /* ShikimoriAppApp.swift */,
 				E6AD01B2294E3A6F0065E5A6 /* ContentView.swift */,
 				E6AD01B4294E3A700065E5A6 /* Assets.xcassets */,
@@ -196,6 +263,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
@@ -264,8 +334,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6AD01BA294E3A700065E5A6 /* Persistence.swift in Sources */,
+				E674DD19294E3F62003F9CD6 /* MiscellaneousView.swift in Sources */,
+				E648D33B2954E91400ACEDDE /* AnimeModel.swift in Sources */,
+				E674DD15294E3EEF003F9CD6 /* DatabaseView.swift in Sources */,
 				E6AD01BD294E3A700065E5A6 /* ShikimoriApp.xcdatamodeld in Sources */,
+				E69A5403294FFABE005519FA /* AppDataViewModel.swift in Sources */,
 				E6AD01B3294E3A6F0065E5A6 /* ContentView.swift in Sources */,
+				E648D3392954E7B100ACEDDE /* AnimeViewModel.swift in Sources */,
+				E69A540729517001005519FA /* LoginView.swift in Sources */,
+				E674DD13294E3E76003F9CD6 /* HomeView.swift in Sources */,
+				E69A540529508EE7005519FA /* AuthViewModel.swift in Sources */,
+				E674DD1B294E3F7B003F9CD6 /* InformationView.swift in Sources */,
+				E65B25E12971D17E00BC37AC /* AnimeManager.swift in Sources */,
+				E674DD17294E3EFD003F9CD6 /* CommunityView.swift in Sources */,
 				E6AD01B1294E3A6F0065E5A6 /* ShikimoriAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +509,7 @@
 				DEVELOPMENT_TEAM = XV865J9PDC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShikimoriApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +539,7 @@
 				DEVELOPMENT_TEAM = XV865J9PDC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShikimoriApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
