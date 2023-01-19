@@ -32,10 +32,12 @@ class AnimeViewModel: ObservableObject {
             .sink { completion in
                 switch completion {
                 case .failure(let error):
+                    print(error)
                     self.apiError = error
                 case .finished: break
                 }
             } receiveValue: { animes in
+                print(animes)
                 self.animes = animes
             }
             .store(in: &cancellables)
@@ -51,10 +53,12 @@ class AnimeViewModel: ObservableObject {
             .sink { completion in
                 switch completion {
                 case .failure(let error):
+                    print(error)
                     self.apiError = error
                 case .finished: break
                 }
             } receiveValue: { info in
+                print(info)
                 self.animeInfo = info
             }
             .store(in: &cancellables)

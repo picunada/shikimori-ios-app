@@ -8,6 +8,7 @@
 import SwiftUI
 import AuthenticationServices
 import Combine
+import CoreData
 
 public struct AuthResponse: Codable {
     var access_token: String?
@@ -18,11 +19,30 @@ public struct AuthResponse: Codable {
     var created_at: Int64?
 }
 
-class AuthViewModel: NSObject ,ObservableObject, ASWebAuthenticationPresentationContextProviding {
+class AuthViewModel: NSObject, ObservableObject, ASWebAuthenticationPresentationContextProviding {
     
     @Published var token: String?
     @Published var response: AuthResponse?
     @Published var isAuthenticated: Bool = false
+    
+    private let persistenceContrroller = PersistenceController.shared
+    
+    override init() {
+        let fetchRequest = AuthData.fetchRequest()
+        fetchRequest.fetchLimit = 1
+        let context = persistenceContrroller.container.viewContext
+        do {
+            let authData = try context.fetch(fetchRequest).first
+            if let authData = authData {
+                self.response = AuthResponse(access_token: authData.access_token, token_type: authData.token_type, expires_in: Int(authData.expires_in), refresh_token: authData.refresh_token, scope: authData.scope, created_at: authData.created_at)
+                print(authData)
+                self.isAuthenticated = true
+            }
+        } catch {
+            print(error)
+        }
+        
+    }
     
     func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
             return ASPresentationAnchor()
@@ -94,6 +114,15 @@ class AuthViewModel: NSObject ,ObservableObject, ASWebAuthenticationPresentation
             self.isAuthenticated = true
         }
         self.response = response
+        
+        let authData = AuthData(context: self.persistenceContrroller.container.viewContext)
+        authData.access_token = response.access_token
+        authData.refresh_token = response.refresh_token
+        authData.expires_in = Int32(response.expires_in ?? 86400)
+        authData.token_type = response.token_type
+        authData.created_at = response.created_at ?? 1
+        authData.scope = response.scope
+        self.persistenceContrroller.saveContext()
     }
     
     @MainActor

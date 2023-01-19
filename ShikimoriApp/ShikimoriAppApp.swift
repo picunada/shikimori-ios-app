@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct ShikimoriAppApp: App {
+    @Environment(\.scenePhase) private var scenePhase
     @StateObject var appData: AppDataViewModel = .init()
     @StateObject var authData: AuthViewModel = .init()
     let persistenceController = PersistenceController.shared
+    
 
     var body: some Scene {
         WindowGroup {
@@ -24,8 +26,20 @@ struct ShikimoriAppApp: App {
                     .environmentObject(authData)
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     .onOpenURL { url in
-                        appData.checkDeepLink(url: url)
+                        _ = appData.checkDeepLink(url: url)
                     }
+            }
+        }
+        .onChange(of: scenePhase) { phase in
+            switch phase {
+            case .active:
+                break
+            case .inactive:
+                break
+            case .background:
+                persistenceController.saveContext()
+            @unknown default:
+                break
             }
         }
     }

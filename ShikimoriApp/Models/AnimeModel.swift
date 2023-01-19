@@ -26,7 +26,7 @@ struct Anime: Codable, Identifiable {
     }
 }
 
-struct AnimeInfo: Codable {
+struct AnimeInfo: Codable, Identifiable {
     var id: Int
     var name, russian: String
     var image: AnimeImage
@@ -43,11 +43,15 @@ struct AnimeInfo: Codable {
     var descriptionSource, franchise: String?
     var favoured, anons, ongoing: Bool
     var threadID, topicID, myanimelistID: Int
-    var ratesScoresStats, ratesStatusesStats: [String]?
+    var ratesScoresStats: [AnimeScoresStats]?
+    var ratesStatusesStats: [AnimeStatusesStats]?
     var updatedAt: String
     var nextEpisodeAt: String?
-    var fansubbers, fandubbers, licensors, genres: [String]?
-    var studios, videos, screenshots: [String]?
+    var fansubbers, fandubbers, licensors: [String]?
+    var genres: [Genre]
+    var studios: [Studio]
+    var videos: [Video]
+    var screenshots: [[String: String]]?
     var userRate: String?
 
     enum CodingKeys: String, CodingKey {
@@ -71,6 +75,50 @@ struct AnimeInfo: Codable {
         case fansubbers, fandubbers, licensors, genres, studios, videos, screenshots
         case userRate = "user_rate"
     }
+}
+
+struct AnimeScoresStats: Codable  {
+    var name: Int
+    var value: Int
+}
+
+struct AnimeStatusesStats: Codable  {
+    var name: String
+    var value: Int
+}
+
+struct Genre: Codable {
+    var id: Int
+    var name, russian, kind: String
+}
+
+struct Studio: Codable {
+    var id: Int
+    var name, filteredName: String
+    var real: Bool
+    var image: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, name
+        case filteredName = "filtered_name"
+        case real, image
+    }
+}
+
+struct Video: Codable {
+    var id: Int
+        var url: String
+        var imageURL: String
+        var playerURL: String
+        var name: String
+        var kind, hosting: String
+
+        enum CodingKeys: String, CodingKey {
+            case id, url
+            case imageURL = "image_url"
+            case playerURL = "player_url"
+            case name, kind, hosting
+        }
 }
 
 // MARK: - Image
